@@ -1,0 +1,32 @@
+ 
+-------------------------------------------------------------------------------
+Project Name: InstallerCreator by ShowMeYourCode.co.nf
+-------------------------------------------------------------------------------
+Version 0.1
+Release date: 03/22/2014
+-------------------------------------------------------------------------------
+Project state:
+ beta 
+-------------------------------------------------------------------------------
+
+Project description
+
+A gui application writen in bash that can install automatically your executives programes in your Linux machine.
+
+-------------------------------------------------------------------------------
+Dependencies:
+
+None
+
+-------------------------------------------------------------------------------
+Documentation
+
+You can find documentation at ShowMeYourCode.co.nf
+-------------------------------------------------------------------------------
+Installation instructions 
+
+No really installation file yet.
+
+Just run the InstallerCreator executable
+
+-------------------------------------------------------------------------------
