@@ -1,6 +1,6 @@
 # Installer Creator by ShowMeYourCode.co.nf
 
-With InstallrCreator you can install fast and easy the applications you have made, the application without installer or java applications in Linux. It contains a GUI and also the capability to install in the right click of nautilus. 
+With InstallerCreator you can install fast and easy the applications you have made, the application without installer or java applications in Linux. It contains a GUI and also the capability to install in the right click of nautilus. 
 Version 1.1
 Release Date: 22/03/2014
 Release Date of latest version: 08/10/2014
