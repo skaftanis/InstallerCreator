@@ -30,7 +30,7 @@ zenity --info --text="Empty List! Please Enter an Serrie first!"
 
 else 
 #choose movies/serrie (20 serries maximum)
-CHOICE=`zenity --list --text="Choose the movie/serrie you want to remove" --column='' ${array[1]} ${array[2]} ${array[3]} ${array[4]} ${array[5]} ${array[6]} ${array[7]} ${array[8]} ${array[9]} ${array[10]} ${array[11]} ${array[12]} ${array[13]} ${array[14]} ${array[15]} ${array[16]} ${array[17]} ${array[18]} ${array[19]} ${array[20]}`
+CHOICE=`zenity --list --text="Choose the movie/serrie you want to remove. DOUBLE CLICK IT!" --column='' ${array[1]} ${array[2]} ${array[3]} ${array[4]} ${array[5]} ${array[6]} ${array[7]} ${array[8]} ${array[9]} ${array[10]} ${array[11]} ${array[12]} ${array[13]} ${array[14]} ${array[15]} ${array[16]} ${array[17]} ${array[18]} ${array[19]} ${array[20]}`
 quitCheck
 fi
 
@@ -45,10 +45,15 @@ PASS=$(zenity --password --title="Give your sudo password")
 quitCheck
 
 #remove executable from /usr/bin
-echo -e $PASS | sudo -S rm /usr/bin/$CHOICE
+echo "echo -e $PASS | sudo -S rm /usr/bin/$CHOICE" > temp
+xterm -e bash temp
+
 
 #remove .desktop file
-echo -e $PASS | sudo -S rm /usr/share/applications/$CHOICE.desktop
+echo "echo -e $PASS | sudo -S rm /usr/share/applications/$CHOICE.desktop" > temp
+xterm -e bash temp
+
+rm temp
 
 #set old name equal to NULL
 OLD=$CHOICE
