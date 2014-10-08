@@ -1,6 +1,6 @@
 # Installer Creator by ShowMeYourCode.co.nf
 
-With InstallrCreator you can install fast and easy the applications you have made or the application without installer in Linux. It contains a GUI and also the capability to install in the right click of nautilus. 
+With InstallrCreator you can install fast and easy the applications you have made, the application without installer or java applications in Linux. It contains a GUI and also the capability to install in the right click of nautilus. 
 Version 1.1
 Release Date: 22/03/2014
 Release Date of latest version: 08/10/2014
@@ -56,5 +56,5 @@ You can find documentation and code explanation in showmeyourcode.co.nf.
 
 ### About ShowMeYourCode
 
---ShowMeYourCode is a new website where you can post your open source application for free and get money from donations. We want to create a big open source community we much more tools in the future. We are just in the beginning, so if you have an open source application and you want to earn some money and reputation, join us. http://showmeyourcode.co.nf/﻿
+ShowMeYourCode is a new website where you can post your open source application for free and get money from donations. We want to create a big open source community we much more tools in the future. We are just in the beginning, so if you have an open source application and you want to earn some money and reputation, join us. http://showmeyourcode.co.nf/﻿
 You have already have some great applications for pc, android, linux, web and many insteresting programming tutorials. 
