@@ -5,6 +5,8 @@ Version 1.1
 Release Date: 22/03/2014
 Release Date of latest version: 08/10/2014
 
+![Alt text](https://lh5.googleusercontent.com/-clK-VEPn03Y/VDVLlHaWbkI/AAAAAAAAAB4/hzrnVzhvwxQ/w1357-h691-no/Screenshot%2Bfrom%2B2014-10-08%2B17%3A32%3A10.png "ScreenShot")
+
 -----------------------
 
 
@@ -13,6 +15,7 @@ Release Date of latest version: 08/10/2014
 
 You can run InstallerCreator simple executing the "InstallerCretor" executive. Executive must be placed always in the same place with other folders and scripts. You can install InstallerCreator in your Linux using itself ;). 
 
+![Alt text](https://lh5.googleusercontent.com/-rIJDdt0jFZM/VDVMIN_jPlI/AAAAAAAAACg/W7tm8JquekE/w649-h396-no/Screenshot%2Bfrom%2B2014-10-08%2B17%3A21%3A14.png "ScreenShot")
 
 ### About the programmer
 
