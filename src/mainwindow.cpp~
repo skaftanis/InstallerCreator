@@ -26,7 +26,7 @@ void MainWindow::on_pushButton_3_clicked()
     system("bash uninstall.sh");
 }
 
-void MainWindow::on_pushButton_1_clicked()
+void MainWindow::on_pushButton_clicked()
 {
     system("bash Nautilus_Install_Setup.sh");
 }
