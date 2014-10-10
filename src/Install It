@@ -9,7 +9,7 @@ function quitCheck {
 }
 
 
-ANS=`pwd`
+ANS=`pwd`/$1
 
 #take the real name of application
 REALNAME=`zenity --entry --text="Please enter the name of the application (no need to be the same with executive). Please DON'T use spaces. DON'T USE THE SAME NAME WITH THE EXECUTIVE (BUG#02)" --title="Choose Name"`
@@ -22,7 +22,13 @@ temp=($ANS)
 COUNT=`grep -o "/" <<<"$ANS" | wc -l`
 NAME=${temp[$COUNT]} 
 
-
+name_count=${#NAME}
+#remove executive name from ANS
+IFS=""
+for ((i=0;i<$name_count;i++))
+do
+	ANS=`echo "${ANS%?}"`
+done
 
 #create executive file (temporary for now)
 echo "cd $ANS" > $REALNAME
