@@ -8,8 +8,9 @@ function quitCheck {
   fi
 }
 
-
-ANS=`pwd`/$1
+#ANS is the path to file. $1 is the file you click. 
+#We use printf.... instead of a simple pwd just for the case of the space charachter in folder's name. 
+ANS=`printf "%q\n" "$(pwd)"`/$1
 
 #take the real name of application
 REALNAME=`zenity --entry --text="Please enter the name of the application (no need to be the same with executive). Please DON'T use spaces. DON'T USE THE SAME NAME WITH THE EXECUTIVE (BUG#02)" --title="Choose Name"`
