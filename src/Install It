@@ -13,7 +13,7 @@ function quitCheck {
 ANS=`printf "%q\n" "$(pwd)"`/$1
 
 #take the real name of application
-REALNAME=`zenity --entry --text="Please enter the name of the application (no need to be the same with executive). Please DON'T use spaces. DON'T USE THE SAME NAME WITH THE EXECUTIVE (BUG#02)" --title="Choose Name"`
+REALNAME=`zenity --entry --text="Please enter the name of the application (no need to be the same with executive). Please DON'T use spaces." --title="Choose Name"`
 quitCheck
 
 
@@ -32,11 +32,11 @@ do
 done
 
 #create executive file (temporary for now)
-echo "cd $ANS" > $REALNAME
-echo " " >> $REALNAME
-echo "chmod +x $NAME" >> $REALNAME
-echo "./$NAME" >> $REALNAME
-echo "java -jar $NAME" >> $REALNAME
+echo "cd $ANS" > $REALNAME.smyc
+echo " " >> $REALNAME.smyc
+echo "chmod +x $NAME" >> $REALNAME.smyc
+echo "./$NAME" >> $REALNAME.smyc
+echo "java -jar $NAME" >> $REALNAME.smyc
 
 
 #take icon location
@@ -55,11 +55,11 @@ xterm -e bash temp
 
 
 #Move generated executive to /usr/bin
-echo "echo $PASS | sudo -S mv $REALNAME /usr/bin" > temp
+echo "echo $PASS | sudo -S mv $REALNAME.smyc /usr/bin" > temp
 xterm -e bash temp
 
 #Make it executalbe
-echo "echo  $PASS | sudo -S chmod +x /usr/bin/$REALNAME" > temp
+echo "echo  $PASS | sudo -S chmod +x /usr/bin/$REALNAME.smyc" > temp
 xterm -e bash temp
 
 #take icon name (last part of ICON)
@@ -74,19 +74,19 @@ ICON_NAME=${temp[$COUNT]}
 	    echo >> $REALNAME.desktop
 	    echo Name="$REALNAME" >> $REALNAME.desktop
 	    echo >> $REALNAME.desktop 
-	    echo Exec="\"$REALNAME\"" >> $REALNAME.desktop
+	    echo Exec="\"$REALNAME.smyc\"" >> $REALNAME.desktop
 	    echo >> $REALNAME.desktop
 	    echo Type="Application" >> $REALNAME.desktop
 	    echo Icon=/usr/share/pixmaps/$ICON_NAME >> $REALNAME.desktop
 	    echo >> $REALNAME.desktop 
 
 #move .desktop file to /usr/share/applications
-echo "echo $PASS | sudo -S mv $REALNAME.desktop /usr/share/applications" > temp
+echo "echo $PASS | sudo -S mv "$REALNAME.desktop" /usr/share/applications" > temp
 xterm -e bash temp
 
 rm temp
 
-echo $REALNAME >> ~/.InstallerCreator
+echo "$REALNAME" >> ~/.InstallerCreator
 
 
 notify-send "$REALNAME installed succesfuly!"
