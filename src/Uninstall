@@ -60,4 +60,7 @@ OLD=$CHOICE
 NEW=NULL
 sed -i "s/$OLD/$NEW/g" ~/.InstallerCreator
 
+#delete all NULLs with their lines
+sed -i '/NULL/d' ~/.InstallerCreator
+
 notify-send "$CHOICE uninstalled succesfuly!"
